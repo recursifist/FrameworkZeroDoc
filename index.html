@@ -66,6 +66,7 @@
     .exlink {
       text-decoration: underline 1px var(--color-accent);
     }
+
     .exlink::after {
       position: absolute;
       content: "⇲";
@@ -73,6 +74,7 @@
       transform: rotate(-90deg);
       padding-left: 2px;
     }
+
     .exlink:hover {
       opacity: 75%;
     }
@@ -298,15 +300,18 @@
 
       <!-- Header Section -->
       <header class="text-center relative h-auto flex items-center justify-center py-9 mb-4">
-        <div class="relative z-10">
-          <h1 class="text-logo font-extrabold uppercase leading-tight mb-2 text-white">
-            <span class="block text-xl md:text-4xl">International Hybrid-Technical</span>
-            <span class="block text-4xl md:text-6xl">
-              <span class="secondary">AI Governance </span>
-              <span class="primary">DAO</span></span>
-          </h1>
-          <p class="text-xl md:text-2xl text-gray-400">A unified framework for responsible AI development</p>
-        </div>
+        <section id="intro">
+          <span class="menu-nav-target-title hidden">Introduction</span>
+          <div class="relative z-10">
+            <h1 class="text-logo font-extrabold uppercase leading-tight mb-2 text-white">
+              <span class="block text-xl md:text-4xl">International Hybrid-Technical</span>
+              <span class="block text-4xl md:text-6xl">
+                <span class="secondary">AI Governance </span>
+                <span class="primary">DAO</span></span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400">A unified framework for responsible AI development</p>
+          </div>
+        </section>
       </header>
 
       <!-- Intro Section -->
@@ -320,19 +325,20 @@
             <img src="datacenters.svg" class="max-w-3xl" />
           </div>
           <p class="mb-6 text-gray-300">
+            <strong>Providing the tools and infrastructure to <i>actualize</i> a global AI safety standard, not merely initiate discourse.</strong>
+            <br><br>
             An open-source blockchain-based Decentralized Autonomous Organization (<span class="tp"
               data-tp="dao">DAO</span>) multilaterally developed
             and operated - enforced by nation states, adopted by the AI industry and integrated
             in to AI-compute datacenters.
             <br><br>
-            It empowers global coordination between policy makers, safety experts and industry with tiered voting,
+            Enabling global coordination between policy makers, safety experts and industry with tiered voting,
             enabling dynamic adaptability and control in an evolving technical landscape.
             Setting red-lines to the race towards Artificial General Intelligence (<span class="tp"
               data-tp="agi">AGI</span>) while preventing
             critical AI risk.
-          </p>
-          <p class="text-gray-300 m-auto"> Building on existing research in technical AI governance, compute governance,
-            verifiable
+            <br><br>
+            Building on existing research in AI governance, technical governance, compute governance, verifiable
             safety, specialized compute hardware (on/off chip), Trusted
             Execution Environments (<span class="tp" data-tp="tee">TEEs</span>) & Trusted
             Capable Model Environments (<span class="tp" data-tp="tcme">TCMEs</span>).
@@ -349,16 +355,15 @@
           <h2 class="md:text-center text-left text-3xl font-bold mb-4 text-gradient bright menu-nav-target-title">
             Mission
             Statement</h2>
-          <p class="md:text-center text-left text-xl font-bold mb-4 text-gray-300">To establish standardized
-            safety-first
-            global AI
-            development that is mutually advantageous.</p>
-          <ul class="flex flex-wrap list-disc list-inside text-lg">
-            <li class="w-full md:w-1/2 p-2 rounded">Tone down dangerous national & market AI race dynamics.</li>
-            <li class="w-full md:w-1/2 p-2 rounded">Empower collaborative AI safety research and progress.</li>
-            <li class="w-full md:w-1/2 p-2 rounded">Establish agreed-upon red lines for frontier AI development.</li>
-            <li class="w-full md:w-1/2 p-2 rounded">Provide secure verifiable infrastructure & standardization.</li>
-          </ul>
+            <br>
+          <div class="grid grid-cols-2 grid-rows-2 content-between place-items-center items-stretch gap-4 text-lg">
+            <div class="text-xl font-bold col-span-2">To bring into being standardized
+            safety-first global AI development that is mutually advantageous.</div>
+            <div class="accent-b border py-4 px-4 w-full rounded col-span-2 md:col-span-1">Tone down dangerous national & market AI race dynamics.</div>
+            <div class="accent-b border py-4 px-4 w-full rounded col-span-2 md:col-span-1">Empower collaborative AI safety research and progress.</div>
+            <div class="accent-b border py-4 px-4 w-full rounded col-span-2 md:col-span-1">Establish agreed-upon red lines for frontier AI development.</div>
+            <div class="accent-b border py-4 px-4 w-full rounded col-span-2 md:col-span-1">Provide secure verifiable infrastructure & standardization.</div>
+          </div>
         </div>
       </section>
 
@@ -373,7 +378,7 @@
               <h3 class="text-2xl font-bold accent bright">Problems</h3>
               <p><span class="font-bold">AI safety is a global issue and priority.</span><br>
                 Establishing AI Governance is fraught with:</p>
-              <ul class="list-disc list-inside space-y-2 pt-2">
+              <ul class="list-disc ml-4 space-y-2 pt-2">
                 <li>Poor coordination across domains and stakeholders.</li>
                 <li>Geopolitical tensions and strategic vulnerabilities.</li>
                 <li>Difficulty in handling decentralized compute.</li>
@@ -383,7 +388,7 @@
               <br>
               <h3 class="text-2xl font-bold accent bright">Solutions</h3>
               <span class="font-bold">Genuine coordination arises out of mutual need.</span>
-              <ul class="list-disc list-inside space-y-4 mt-2">
+              <ul class="list-disc ml-4 space-y-4 mt-2">
                 <li><span class="italic font-bold">International:</span> Levels the playing field, setting race
                   rules to the of benefit all stakeholders.</li>
                 <li><span class="italic font-bold">Hybrid-Technical:</span> Combines human oversight with robust
@@ -482,9 +487,9 @@
           <span class="tp" data-tp="personnel">personnel</span>.
           <br><br>
           <strong>Types of voting:</strong>
-          <ol class="flex-1 mt-2 list-inside space-y-4 text-gray-300">
+          <ul class="flex-1 mt-2 space-y-4 text-gray-300">
             <li><strong class="text-lg accent bright">Reviews</strong><br>
-              <ul class="list-disc list-inside ml-4">
+              <ul class="list-disc ml-4">
                 <li>Approving new <span class="tp" data-tp="model">model</span> training and new <span class="tp"
                     data-tp="hardware">hardware</span></li>
                 <li>Onboarding existing models</li>
@@ -495,24 +500,25 @@
               </ul>
             </li>
             <li><strong class="text-lg accent bright">System</strong><br>
-              <ul class="list-disc list-inside ml-4">
+              <ul class="list-disc ml-4">
                 <li><span class="tp" data-tp="token">Tokenomics</span> (e.g. gas prices, gas tax and treasury award)
                 </li>
                 <li>Tier changes for AI models and personnel</li>
               </ul>
             </li>
             <li><strong class="text-lg accent bright">Safety</strong><br>
-              <ul class="list-disc list-inside ml-4">
-                <li>Selecting safety modules for <span class="tp" data-tp="thestandard">the safety standard</span>, which is a multiple-rounds process</li>
+              <ul class="list-disc ml-4">
+                <li>Selecting safety modules for <span class="tp" data-tp="thestandard">the safety standard</span>,
+                  which is a multiple-rounds process</li>
                 <li>Approving new <span class="tp" data-tp="template">templates</span> for models, audits and safeguards
                 </li>
               </ul>
             </li>
             <li><strong class="text-lg accent bright">Emergency</strong><br>
-              <ul class="list-disc list-inside ml-4">
+              <ul class="list-disc ml-4">
                 <li>Threat escalation for lower tier reporting</li>
                 <li><strong>Threat response:</strong>
-                  <ul class="list-disc list-inside ml-4">
+                  <ul class="list-disc ml-4">
                     <li>Rejecting a model</li>
                     <li>Revoking hardware</li>
                     <li>Adding/removing safety modules</li>
@@ -521,7 +527,7 @@
                 </li>
               </ul>
             </li>
-          </ol>
+          </ul>
         </div>
       </section>
 
@@ -537,7 +543,7 @@
             <strong>The development of the system is an international endeavor.</strong>
             <br>
             Financial support is sourced from:
-            <ul class="text-lg text-gray-300 list-disc ml-4 mt-2 list-inside space-y-2">
+            <ul class="text-lg text-gray-300 list-disc ml-4 mt-2 space-y-2">
               <li><strong>Nation States:</strong><br>
                 Participating governments, initially superpowers.</li>
               <li><strong>Supranational Organizations:</strong><br>
@@ -549,7 +555,7 @@
             <br>
             <strong class="text-2xl accent bright">Blockchain Economy</strong><br>
             Computational system activity is metered using gas tokens:
-            <ul class="text-lg text-gray-300 list-disc ml-4 mt-2 list-inside space-y-2">
+            <ul class="text-lg text-gray-300 list-disc ml-4 mt-2 space-y-2">
               <li><strong>Closed-Loop Resource Accounting</strong><br>
                 Gas tokens are not a tradable cryptocurrency (DeFi) rather internal accounting units generated and
                 managed by
@@ -565,15 +571,15 @@
             <br>
 
             Gas tokens measure resource use for:
-            <ul class="text-lg text-gray-300 list-disc list-inside ml-4 mt-2 space-y-2">
+            <ul class="text-lg text-gray-300 list-disc ml-4 mt-2 space-y-2">
               <li><strong>Blockchain Operations:</strong>
-                <ul class="list-disc list-inside ml-4">
+                <ul class="list-disc ml-4">
                   <li>Consensus mechanism transactions</li>
                   <li>System state updates</li>
                 </ul>
               </li>
               <li><strong>Infrastructure Overheads</strong>
-                <ul class="list-disc list-inside ml-4">
+                <ul class="list-disc ml-4">
                   <li>Operational costs of safety mechanisms</li>
                   <li>Hardware inspection costs</li>
                   <li>Shared treasury funding</li>
@@ -607,8 +613,10 @@
       <section id="limitations" class="section-hidden">
         <div class="content-card p-6 md:p-10 rounded-md">
           <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gradient bright menu-nav-target-title">Limitations</h2>
-          <ul class="text-lg text-gray-300 list-disc list-inside space-y-4">
-            <li><strong>Time</strong>, this solution assume longer timelines to reaching AGI.</li>
+          <ul class="text-lg text-gray-300 list-disc ml-4 space-y-4">
+            <li><strong>Time</strong>, this solution assume longer timelines to reaching <span class="tp" data-tp="agi">AGI</span>.</li>
+            <li><strong>Political will</strong> and recognition of the imminent need for collaborative international AI governance. <br>
+              Nations therefore must become aware of critical AI risk and realize an AI weapons race benefits none.</li>
             <li><strong>Not designed for <span class="tp" data-tp="agi">AGI</span> or superintelligence;</strong>
               focuses on pre-AGI preventative red
               lines.<br>
@@ -617,8 +625,11 @@
               unsolvable given the timeline set forth by AI race.
             </li>
             <li><strong>Relies on specialized hardware development and cryptographic security.</strong><br>
-              There is strong and growing research for the design of specialized hardware, however development and
-              implementation take time and global coordination. As frontier models grow in capability, so does their
+              There is strong and growing research for the design of specialized hardware with some real-world implementation,
+              however further development is needed.
+              It is the ambition of this framework to enact global coordination and the will to accomplish this.
+              <br><br>
+              As frontier models grow in capability, so does their
               threat to cryptographic security, escalating the need of critical supervision and ongoing
               reinforcement. This system's many security layers reduce threat impact though it remains an active
               concern.
@@ -633,8 +644,10 @@
               datacenters. Frontier AI advancements could produce model architectures that require minimal compute for
               training, running on standard hardware.</li>
             <li><strong>Does not fully govern model inference.</strong><br>
-              While inference at participating AI-compute datacenters can only happen with approved models, inference input/output is
-              beyond the scope of the system.
+              While inference at participating AI-compute datacenters can only happen with approved, certified models,
+              governance of inference input/output is beyond the scope of the system.
+              On-chain system safeguards for inference input/output could be created, though the framework itself lacks ability to enforce it.
+              <br><br>
               Inference require fast and low-latency processing at scale, which conflicts with the slower and
               resource-intensive nature of blockchain.
               Neither does inference necessitate AI-compute hardware, with current frontier open-weight models already
@@ -657,7 +670,7 @@
           </h2>
           <p class="text-gray-300"><strong>Layered blockchain structure:</strong><br>
             <span class="accent bright"><span class="tp" data-tp="layer1">Layer-1</span></span> Mainnet controls core
-            components which are <span class="tp" data-tp="sharding">sharded</span> 
+            components which are <span class="tp" data-tp="sharding">sharded</span>
             accordingly.<br>
             <span class="accent bright"><span class="tp" data-tp="layer2">Layer-2</span></span> ZK-Rollups are employed
             for less dynamic components to reduce
@@ -695,7 +708,7 @@
       <section id="flow" class="mb-16 section-hidden">
         <div class="content-card p-6 md:p-10 rounded-md text-lg">
           <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gradient bright menu-nav-target-title">System Flow</h2>
-          
+
           <a href="safetyflow.png" target="_blank"><img src="safetyflow.png" alt="Basic Safety Flow Diagram"
               class="ml-0 md:-ml-16 pr-0 lg:pr-12" /></a>
           <p class="text-lg text-gray-300">
@@ -741,7 +754,7 @@
                 with each run specifying <span class="tp" data-tp="hardware">hardware</span> for compute.
                 Each run (or run stage) depends on <span class="tp" data-tp="otk">OTKs</span> (Hardware requires OTKs to
                 operate) tied to <span class="tp" data-tp="budget">compute budgets</span> and
-                <span class="tp" data-tp="hwattestations">hardware integrity</span>. 
+                <span class="tp" data-tp="hwattestations">hardware integrity</span>.
                 <br><br>
                 Inference models have an
                 alternative flow, only requiring OTKs after being certified.
@@ -750,13 +763,15 @@
               <li><strong class="text-lg accent bright">OTK Issuer:</strong><br> Uses near real-time hardware and model
                 budgets for compute governance.
                 OTKs are cryptographically generated on-chain, tied to a specific run, workload, model, and specific
-                registered hardware, with
-                expiry. Semi-random OTK "drip" issues keys incrementally during the run, mitigating theft, reuse or
+                registered hardware, with expiry. <br>
+                Semi-random OTK "drip" issues keys incrementally during the run, mitigating theft, reuse or
                 decentralized compute gaming.
                 <br><br>
-                The <span class="tp" data-tp="otk">OTK</span> "drip" overcomes blockchain latency issues by issuing budget
+                The <span class="tp" data-tp="otk">OTK</span> "drip" overcomes blockchain latency issues by issuing
+                budget
                 rations, potentially queuing an
-                addition OTK to prevent interruption, never surpassing a run's (or hardware's) allotted budget. <span class="tp" data-tp="budget">Budgets</span>
+                addition OTK to prevent interruption, never surpassing a run's (or hardware's) allotted budget. <span
+                  class="tp" data-tp="budget">Budgets</span>
                 are managed
                 on-chain, updated throughout a run. The OTK Issuer halts the OTK "drip" on failed hardware integrity
                 attestations.
@@ -765,11 +780,14 @@
                 underlying hardware.
               </li>
               <li><strong class="text-lg accent bright">Phase Detection:</strong><br>
-                Hardware enforces a model (or run stage) <span class="tp" data-tp="phase">phase</span> to prevent phase gaming (e.g.
+                Hardware enforces a model (or run stage) <span class="tp" data-tp="phase">phase</span> to prevent phase
+                gaming (e.g.
                 Inference used for unapproved training).
-                This is mitigated via model and workload <span class="tp" data-tp="template">templates</span>, in addition to <span class="tp" data-tp="safeguards">safeguards</span>.
+                This is mitigated via model and workload <span class="tp" data-tp="template">templates</span>, in
+                addition to <span class="tp" data-tp="safeguards">safeguards</span>.
                 <br><br>
-                Phase detection is identified by differences in the requirements for workload runs and hardware usage (data, compute, memory, energy, duration, output).
+                Phase detection is identified by differences in the requirements for workload runs and hardware usage
+                (data, compute, memory, energy, duration, output - <a href="#apdx-phase">See appendix</a>).
               </li>
             </ol>
             <ol class="flex-1 mt-2 list-inside space-y-4 text-gray-300">
@@ -777,11 +795,13 @@
                 specialized hardware
                 (with approved budgets
                 for compute, memory, etc.)
-                must be physically verified, inspections are carried out via authorized registered <span class="tp" data-tp="personnel">personnel</span> (or a group
+                must be physically verified, inspections are carried out via authorized registered <span class="tp"
+                  data-tp="personnel">personnel</span> (or a group
                 of adversarial personnel when
                 requested), on a periodic basis.
                 <br><br>
-                <span class="tp" data-tp="hwattestations">Integrity attestations</span> run semi-randomly during a run to detect
+                <span class="tp" data-tp="hwattestations">Integrity attestations</span> run semi-randomly during a run
+                to detect
                 tampering (e.g. BIOS modifications, physical seal breach, relocation, anomalies, etc). This makes
                 gaming difficult by unpredictability and reduces on-chain load.
                 <br><br>
@@ -789,36 +809,45 @@
                 hardware re-aquires the status 'Pending' which inititates a physical inspection.
               </li>
               <li><strong class="text-lg accent bright">Audits and Safeguards:</strong><br>
-                Both are run inside privacy-preserving <span class="tp" data-tp="tee">TEEs</span> or <span class="tp" data-tp="tcme">TCMEs</span> 
+                Both are run inside privacy-preserving <span class="tp" data-tp="tee">TEEs</span> or <span class="tp"
+                  data-tp="tcme">TCMEs</span>
                 and produce reports without disclosing intellectual property details.
                 Audits verify safety via evaluations and benchmarks. Safeguards mitigate unauthorized
-                data domains and architectures, as well as <span class="tp" data-tp="backdoor">backdoors</span> and 
+                data domains and architectures, as well as <span class="tp" data-tp="backdoor">backdoors</span> and
                 <span class="tp" data-tp="rsi">RSI</span> detection. Depending on the severity level
                 of a failed safeguard, a workload may be cancelled.
                 <br><br>
-                The required system audits and safeguards are selected and approved via voting to establish <span class="tp" data-tp="thestandard">the safety standard</span>, with different sets
+                The required system audits and safeguards are selected and approved via voting to establish <span
+                  class="tp" data-tp="thestandard">the safety standard</span>, with different sets
                 enabled depending on the model template used.
               </li>
               <li><strong class="text-lg accent bright">Post-Workload:</strong><br>
                 When a workload completes, a new 'Pending' Inference model is created then subsequently run through
-                multiple audits (post-safety). Audits with no scaffolding are run first, followed by 'live' audits with full
+                multiple audits (post-safety). Audits with no scaffolding are run first, followed by 'live' audits with
+                full
                 scaffolding (web calls, tooling, etc).
                 <br><br>
-                If approved, the model <span class="tp" data-tp="container">container</span> (post-workload output) is transfered to off-chain storage (managed by model authors), and
+                If approved, the model <span class="tp" data-tp="container">container</span> (post-workload output) is
+                transfered to off-chain storage (managed by model authors), and
                 can be used for inference.
                 <br><br>
                 Failing models are assigned a status of 'Rejected' and voted on to determine whether a model
                 is permitted to undergo another attempt. If permitted, a new post-train model is registered with
-                restrictive
-                templates. These templates enable post-training with proxy access to the failed model output, which is
+                restrictive templates.
+                <br>
+                These restrictive templates enable post-training with proxy access to the failed model output, which is
                 temporarily stored in a secure vault only accessible by the system - this prevents exposure even to the
                 model authors.
               </li>
               <li><strong class="text-lg accent bright">Inference at AI-compute datacenters:</strong><br>
-                Inference only requires <span class="tp" data-tp="otk">OTKs</span>, reliant on a certified inference model. This is the extent by which the
+                Inference only requires <span class="tp" data-tp="otk">OTKs</span>, reliant on a certified inference
+                model. This is the extent by which the
                 system directly governs inference.
-                Verification of certified inference models with the cryptographic Container ID (fingerprint) is openly available,
-                allowing verification by regular datacenters, edge devices and other hardware - however enforcement is out-of-scope of the system.
+                Verification of certified inference models with the cryptographic Container ID (fingerprint) is openly
+                available,
+                allowing verification by regular datacenters, edge devices and other hardware with
+                <span class="tp" data-tp="devicemating">device mating</span> - however enforcement is
+                out-of-scope of the system.
               </li>
             </ol>
           </div>
@@ -830,24 +859,31 @@
       <!-- Detailed Mechanisms Section -->
       <section id="mechanisms" class="section-hidden">
         <div class="content-card p-6 md:p-10 rounded-md text-lg">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gradient bright menu-nav-target-title">Appendix
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gradient bright menu-nav-target-title">
+            Appendix
           </h2>
           <strong class="text-lg">This framework is builds off existing research in AI governance.</strong><br>
-          Drawing heavily on The Oxford Martin AI Governance Initiative's research, specifically <a class="exlink" href="https://aigi.ox.ac.uk/publications/verification-for-international-ai-governance/" target="_blank">Harack, 2025</a>
+          Drawing heavily on The Oxford Martin AI Governance Initiative's research, specifically <a class="exlink"
+            href="https://aigi.ox.ac.uk/publications/verification-for-international-ai-governance/"
+            target="_blank">Harack, 2025</a>
           <br>
-          The DAO framework was inspired by <a class="exlink" href="https://www.figma.com/board/spae5pctjAE6eSfhQ1ngRt/SciThereum" target="_blank">The SciThereum Project</a>.
+          The DAO framework was inspired by <a class="exlink"
+            href="https://www.figma.com/board/spae5pctjAE6eSfhQ1ngRt/SciThereum" target="_blank">The SciThereum
+            Project</a>.
           <br>
           <br>
           <ul class="list-inside space-y-12 text-gray-300">
-            <li><strong class="text-xl accent bright">Trusted Execution Environments (TEEs):</strong><br>
+            <li id="apdx-tee"><strong class="text-xl accent bright">Trusted Execution Environments (TEEs):</strong><br>
               TEEs provide secure and privacy-preserving code execution in a sealed virtual environment.
               They allow the system to securely deploy model containers and run workloads. They produce reports without
-              disclosing intellectual property details. They are utilized when running safeguards and audits on model containers and
+              disclosing intellectual property details. They are utilized when running safeguards and audits on model
+              containers and
               post-workload output (attestable audits).
               <br>
               <a class="exlink" href="https://arxiv.org/pdf/2506.23706" target="_blank">Schnabl, 2025</a>
             </li>
-            <li><strong class="text-xl accent bright">Trusted Capable Model Environments (TCMEs):</strong><br>
+            <li id="apdx-tcme"><strong class="text-xl accent bright">Trusted Capable Model Environments
+                (TCMEs):</strong><br>
               TCMEs allow a stateless AI model to be instructed to privately verify model container and workload code to
               detect
               banned patterns and red-line violations (e.g. RSI, unapproved architecture, or dangerous algorithms).
@@ -860,16 +896,17 @@
               post-Workload output.
               <br>
               <a class="exlink" href="https://arxiv.org/pdf/2501.08970" target="_blank">Shumailov, 2025</a>
-              
+
             </li>
-            <li><strong class="text-xl accent bright">Recursive Self-Improvement (RSI) Mitigation</strong><br>
+            <li id="apdx-rsi"><strong class="text-xl accent bright">Recursive Self-Improvement (RSI)
+                Mitigation</strong><br>
               Through (A) Model registration
               (slowing releases via voting), (B) model architecture templates (C) pre-workload safeguards (via TCMEs)
               and (D) compute budgets.
               It is important to note that total elimination of these concerns is not feasible given the development of
               novel architectures and algorithmic improvements.
             </li>
-            <li><strong class="text-xl accent bright">Phase Detection:</strong><br>
+            <li id="apdx-phase"><strong class="text-xl accent bright">Phase Detection:</strong><br>
               Reliably detecting a model's Phase requires adjustments, and may even become infeasible as architectures
               and hardware advance.
               <div class="overflow-x-auto">
@@ -954,7 +991,9 @@
               </div>
             </li>
           </ul>
-          <a class="exlink" href="https://intelligence.org/wp-content/uploads/2024/11/Mechanisms-to-Verify-International-Agreements-About-AI-Development-27-Nov-24.pdf" target="_blank">Scher, 2024</a>
+          <a class="exlink"
+            href="https://intelligence.org/wp-content/uploads/2024/11/Mechanisms-to-Verify-International-Agreements-About-AI-Development-27-Nov-24.pdf"
+            target="_blank">Scher, 2024</a>
         </div>
       </section>
 
@@ -966,8 +1005,10 @@
   <script>
     // Tooltips <span class="tp" data-tp="keyword">
     const dict = {
-      agi: "AI with powerful capabilities across all domains, matching the level of the most-capable human of each domain. It is not an artificial 'team of experts' rather " +
-        "an absolute polymath not limited to human brain speeds, memory or performance. It is therefore smarter-than-human making it extremely difficult to control, or verify safety.",
+      agi: "AGI: AI with powerful capabilities across all domains, matching the level of the most-capable human of each domain. It is not an artificial 'team of experts' rather " +
+        "an absolute polymath not limited to human brain speeds, memory or performance. It is therefore smarter-than-human making it extremely difficult to control, or verify safety. Using this definition, " +
+        "AGI will speed up progress to Superintelligence, either via autonomous self-improvement or AI-assisted research. " +
+        "What separates AGI from Superintelligence is the factor of smarter-than-human gap.",
       tee: "Trusted Execution Environment: Secure, privacy-preserving execution for model containers and workloads.",
       tcme: "Trusted Capable Model Environment: Verifies model containers for banned patterns in a sealed environment using a separate stateless AI model. They are limited by the capabilities and trust of AI model.",
       model: "Refers to an AI model registered for training or inference in the system, subject to relevant safety standards.",
@@ -996,7 +1037,10 @@
       rsp: "Responsible Safe Scaling Policies: Guidelines for safe AI development.",
       ccbrn: "Cyber, Chemical, Biological, Radiological, Nuclear: Restricted data domains for safety.",
       token: "The system uses tokens for metering blockchain system operations (refer to as 'gas'), not tradable externally. " +
-              "Tokens are purchased by the model authors, safety module creators and nations that maintain an upkeep pool."
+        "Tokens are purchased by the model authors, safety module creators and nations that maintain an upkeep pool.",
+      devicemating: "Device mating: A specialied hardware that locks a specific AI model to a particular device, specifically relevant for military AI use. " +
+        "The device cannot run a different model and the model cannot be copied and run on other hardware. " +
+        "This ensures that the model and hardware are used only as intended and prevents unauthorized reuse or repurposing."
     }
 
     let c = ""
@@ -1134,7 +1178,7 @@
         toggleMenu()
       }
     })
-    const showMain = () => setTimeout(() => document.getElementById('main').classList.add('show'), 0 * 1.5 * 1000)
+    const showMain = () => setTimeout(() => document.getElementById('main').classList.add('show'), 1.5 * 1000)
 
     // onLoad event
     window.onload = () => {
