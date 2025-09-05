@@ -1,12 +1,28 @@
-<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+<svg width="96" height="76" xmlns="http://www.w3.org/2000/svg" style="vector-effect: non-scaling-stroke; background:#111;">
+  <defs>
+  </defs>
+  <g transform="translate(22 6) scale(0.8 1)">
+    <line stroke-width="6" y2="8" x2="32" y1="8" x1="8" stroke="#114ccaff" fill="none" />
+    <line stroke-width="6" y2="56" x2="8" y1="8" x1="8" stroke="#114ccaff" fill="none" />
+    <line stroke-width="6" y2="32" x2="8" y1="32" x1="32" stroke="#114ccaff" fill="none" opacity="0.5" />
 
- <g>
-  <title>Layer 1</title>
-  <line transform="rotate(-110, 42.4716, 29.0256)" id="svg_1" stroke-width="3" stroke="#2d94fc" y2="24.02562" x2="63.47156" y1="34.02562" x1="21.47156"/>
-  <line transform="rotate(-110, 31.6668, 38.8112)" id="svg_2" stroke-width="3" stroke="#2d94fc" y2="20.3112" x2="47.16682" y1="57.3112" x1="16.16682"/>
-  <line transform="rotate(-110, 19.7859, 20.7878)" id="svg_4" stroke-width="3" stroke="#2d94fc" y2="7.28775" x2="14.28593" y1="34.28775" x1="25.28593"/>
-  <circle transform="rotate(-110, 54.3524, 47.0491)" id="svg_7" fill="#8e14e0" r="7" cy="47.04906" cx="54.35245"/>
-  <circle transform="rotate(-110, 30.5907, 11.0022)" id="svg_8" fill="#8e14e0" r="7" cy="11.00217" cx="30.59067"/>
-  <circle transform="rotate(-110, 8.98119, 30.5733)" id="svg_9" fill="#8e14e0" r="7" cy="30.57333" cx="8.98119"/>
- </g>
+    <line stroke-width="6" y2="8" x2="56" y1="8" x1="32" stroke="#731ac7ff" fill="none" />
+    <line transform="matrix(1, 0, 0, 1, 0, 0) matrix(1, 0, 0, 1, 0, 0) matrix(1, 0, 0, 1, 0, 0)"
+      y2="56" x2="56" y1="56" x1="8" fill="none"    stroke="#731ac7ff" stroke-width="6" opacity="0.9" />
+    <line fill="none" y2="56" x2="8" y1="8" x1="56" stroke="#731ac7ff" stroke-width="6" opacity="0.9" />
+
+    <line stroke-width="6" y2="56" x2="56" y1="8" x1="56" stroke="#1638ceff" fill="none" opacity="0.4" />
+
+    <g fill="rgba(88, 138, 196, 0.8)">
+      <circle cx="8" cy="8"  r="3.5" />
+      <circle cx="32" cy="8" r="3.5" />
+      <circle cx="32" cy="32" r="3.5" />
+      <circle cx="32" cy="56" r="3.5" />
+      <circle cx="8" cy="32" r="3.5" />
+      <circle cx="56" cy="32" r="3.5" />
+      <circle cx="56" cy="8"  r="3.5" />
+      <circle cx="8" cy="56" r="3.5" />
+      <circle cx="56" cy="56" r="3.5" />
+    </g>
+  </g>
 </svg>
