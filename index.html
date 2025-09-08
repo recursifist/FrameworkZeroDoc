@@ -187,8 +187,8 @@
 
     .context-menu {
       position: fixed;
-      top: 1rem;
-      right: 1rem;
+      top: 1.25rem;
+      right: 1.25rem;
       z-index: 100;
     }
 
@@ -294,6 +294,8 @@
         </svg>
       </div>
       <div class="menu-list-container" id="menu-list">
+        <!-- Doc Version -->
+        <div class="mt-1 ml-4 select-none text-gray-400">Version 1.01</div>
         <!-- Menu items will be dynamically populated -->
         <ul></ul>
       </div>
@@ -302,13 +304,13 @@
     <div class="container max-w-6xl mx-auto px-4 py-12 md:px-6">
 
       <!-- Header Section -->
-      <div class="absolute top-1 left-0 flex scale-75 pl-1 py-2 rounded-lg" style="background-color: #11111133">
-        <img src="logo.svg" alt="FrameworkZero lgo" />
+      <div class="absolute top-1 left-0 flex scale-75 pl-1 py-2 rounded-lg select-none"
+        style="background-color: #11111133">
+        <img src="logo.svg" alt="FrameworkZero logo" />
         <div class="-ml-4 text-logo leading-tight self-center">
           <span class="block text-left mt-1 pr-6">
             <span class="text-gray-300 font-extrabold text-3xl md:text-4xl">Framework</span>
             <span class="text-gray-300 block -mt-3 text-2xl">Zero</span>
-
           </span>
         </div>
       </div>
@@ -338,8 +340,10 @@
               class="mix-blend-screen" />
           </div>
           <div class="text-center">
-            <div class="text-3xl font-bold">Providing the tools <span class="text-nowrap">and infrastructure</span> </div>
-            <div class="text-2xl font-bold">to <i>actualize</i> <span class="text-nowrap">a global AI safety standard</span></div>
+            <div class="text-3xl font-bold">Providing the tools <span class="text-nowrap">and infrastructure</span>
+            </div>
+            <div class="text-2xl font-bold">to <i>actualize</i> <span class="text-nowrap">a global AI safety
+                standard</span></div>
           </div>
           <br>
           <p class="text-gray-300">
@@ -601,17 +605,21 @@
                 A <span class="tp" data-tp="workload">workload</span> consists of multiple runs conducted by the <span
                   class="tp" data-tp="container">container</span>,
                 with each run specifying <span class="tp" data-tp="hardware">hardware</span> for compute.
-                Each run (or run stage) depends on <span class="tp" data-tp="otk">OTKs</span> (Hardware requires OTKs to
-                operate) tied to <span class="tp" data-tp="budget">compute budgets</span> and
-                <span class="tp" data-tp="hwattestations">hardware integrity</span>.
-                Inference models have an
-                alternative flow, only requiring OTKs after being certified.
+                Each run (or run stage) depends on <span class="tp" data-tp="otk">OTKs</span> (required for
+                hardware operation) tied to <span class="tp" data-tp="budget">compute budgets</span> and
+                <span class="tp" data-tp="hwattestations">hardware integrity</span>. Runs can consist of multiple stages
+                which is needed to handle variations in <span class="tp" data-tp="budget">phase</span> for hardware
+                phase-locking.
+                <br><br>
+                Certified inference models have an
+                alternative flow, the system does not directly manage their workloads (input/output) and larger budget
+                OTKs are issued.
                 <br>
               </li>
               <li><strong class="text-lg accent bright">OTK Issuer:</strong><br> Uses near real-time hardware and model
                 budgets for compute governance.
                 OTKs are cryptographically generated on-chain, tied to a specific run, workload, model, and specific
-                registered hardware, with expiry. <br>
+                registered hardware, with expiry.
                 Semi-random OTK "drip" issues keys incrementally during the run, mitigating theft, reuse or
                 decentralized compute gaming.
                 <br><br>
@@ -635,7 +643,8 @@
                 addition to <span class="tp" data-tp="safeguards">safeguards</span>.
                 <br><br>
                 Phase detection is identified by differences in the requirements for workload runs and hardware usage
-                (data, compute, memory, energy, duration, output).<br>
+                (data, compute, memory, energy, duration, output).
+                <br><br>
                 <a class="text-base underline" href="#apdx-phase">See appendix for phase detection specifics.</a>
               </li>
             </ol>
@@ -657,19 +666,23 @@
                 In the event of numerous failed hardware integrity attestations, the hardware is revoked. Revoked
                 hardware re-acquires the status 'Pending' which initiates a physical inspection.
               </li>
-              <li><strong class="text-lg accent bright">Audits and Safeguards:</strong><br>
-                Both are run inside privacy-preserving <span class="tp" data-tp="tee">TEEs</span> or <span class="tp"
-                  data-tp="tcme">TCMEs</span>
-                and produce reports without disclosing intellectual property details.
-                Audits verify safety via <span class="tp" data-tp="eval">evaluations</span> and <span class="tp"
-                  data-tp="bench">benchmarks</span>. Safeguards mitigate unauthorized
+              <li><strong class="text-lg accent bright">Safeguards and Audits:</strong><br>
+                The required system audits and safeguards are selected and approved via voting to establish <span
+                  class="tp" data-tp="thestandard">the safety standards</span>, with different sets
+                applying depending on the model template used.
+                <br><br>
+                Safeguards mitigate unauthorized
                 data domains and architectures, in addition to <span class="tp" data-tp="backdoor">backdoors</span> and
                 <span class="tp" data-tp="rsi">RSI</span> detection. Depending on the severity level
                 of a failed safeguard, a workload may be cancelled.
+                Audits verify safety via <span class="tp" data-tp="eval">evaluations</span> and <span class="tp"
+                  data-tp="bench">benchmarks</span>.
+                Both are run inside privacy-preserving <span class="tp" data-tp="tee">TEEs</span> or <span class="tp"
+                  data-tp="tcme">TCMEs</span>
+                and produce reports without disclosing intellectual property details.
                 <br><br>
-                The required system audits and safeguards are selected and approved via voting to establish <span
-                  class="tp" data-tp="thestandard">the safety standard</span>, with different sets
-                enabled depending on the model template used.
+                Benchmarks measure capability levels and are used to enforce agreed-upon limits (red-lines),
+                serving to limit general-purpose models or restrict narrow AI models to their domain.
               </li>
               <li><strong class="text-lg accent bright">Post-Workload:</strong><br>
                 When a workload completes, a new 'Pending' Inference model is created then subsequently run through
@@ -850,7 +863,7 @@
           </div>
         </div>
       </section>
-      
+
       <hr class="hr-gradient my-16">
 
       <!-- About Section -->
@@ -861,9 +874,10 @@
           </h2>
           The <i>AI Safety FrameworkZero Organization</i> seeks only to accomplish it's mission: <br>
           <strong>To bring into being standardized safety-first
-          global AI development that is mutually advantageous.</strong>
+            global AI development that is mutually advantageous.</strong>
           <br><br>
-          It's ambition is to enact global coordination, inspire the international will and actualize an AI safety standard to prevent catastrophic AI risk.
+          It's ambition is to enact global coordination, inspire the international will and actualize an AI safety
+          standard to prevent catastrophic AI risk.
           It is not a for-profit project.
           <br><br>
           <strong class="text-lg">This framework builds off existing research in AI governance.</strong><br>
@@ -882,7 +896,8 @@
             Project</a>.
           <br>
           <br>
-          <strong class="text-xl">Get in touch via the <a href="https://x.com/i/communities/1964271923119989164" target="_blank" class="exlink">𝕏 community</a></strong>
+          <strong class="text-xl">Get in touch via the <a href="https://x.com/i/communities/1964271923119989164"
+              target="_blank" class="exlink">𝕏 community</a></strong>
         </div>
       </section>
 
