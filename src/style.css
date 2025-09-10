@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary-rgb: 109, 25, 205;
+  --color-secondary-rgb: 47, 38, 208;
+  --color-accent-rgb: 24, 114, 200;
+  --background-color-rgb: 24, 23, 38;
+  --color-primary: rgba(var(--color-primary-rgb), .8);
+  --color-secondary: rgba(var(--color-secondary-rgb), .8);
+  --color-accent: rgba(var(--color-accent-rgb), .8);
+  --background-color: rgb(var(--color-background-rgb));
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.secondary {
+  color: var(--color-secondary);
+}
+
+.accent {
+  color: var(--color-accent);
+}
+
+.primary-b {
+  border-color: var(--color-primary);
+}
+
+.secondary-b {
+  border-color: var(--color-secondary);
+}
+
+.accent-b {
+  border-color: var(--color-accent);
+}
+
+.primary-bg {
+  background-color: var(--color-primary);
+}
+
+.secondary-bg {
+  background-color: var(--color-secondary);
+}
+
+.accent-bg {
+  background-color: var(--color-accent);
+}
+
+::selection,
+::-moz-selection {
+  background-color: var(--color-secondary) !important;
+}
+
+.exlink {
+  text-decoration: underline 1px var(--color-accent);
+  padding-right: 16px;
+}
+
+.exlink::after {
+  position: absolute;
+  content: "⇲";
+  font-size: .8em;
+  transform: rotate(-90deg);
+  padding-left: 2px;
+}
+
+.exlink:hover {
+  opacity: 75%;
+}
+
+.tp {
+  border-bottom: 2px var(--color-accent) dotted;
+  cursor: pointer;
+}
+
+.tp:active,
+.tp:hover {
+  opacity: 0.75;
+}
+
+#tp-container {
+  background: #140527;
+}
+
+body {
+  font-family: 'Roboto Flex', sans-serif;
+  color: #e0e0e0;
+  background-color: var(--background-color);
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+canvas {
+  opacity: 0.7;
+}
+
+#main {
+  overflow-y: hidden;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 2s ease, visibility 2s ease;
+}
+
+#main::before {
+  content: 'Loading...';
+  font-size: xx-large;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  margin-top: 5%;
+  z-index: 90;
+}
+
+#main.show {
+  height: auto;
+  visibility: visible;
+  opacity: 1;
+}
+
+#main.show::before {
+  visibility: hidden;
+}
+
+.text-logo {
+  font-family: "Sansation", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+table {
+  border-radius: 1rem;
+}
+
+.text-gradient {
+  background: linear-gradient(60deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bright {
+  filter: brightness(1.5);
+}
+
+.content-card {
+  background: #0e0e11;
+  border: 1px solid #2a2844cc;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.intro-card {
+  background: #0e0e1144 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.hr-gradient {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), var(--color-secondary), transparent);
+  border: none;
+}
+
+.section h2,
+.section h3 {
+  color: var(--color-primary);
+}
+
+.list-disc li::marker {
+  color: var(--color-accent);
+}
+
+.context-menu {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 100;
+}
+
+.menu-button {
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(13, 13, 18, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+  background-color: rgba(255, 255, 255, 0.025);
+  border-color: var(--color-primary);
+}
+
+.menu-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke: #e0e0e0;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s ease;
+}
+
+.menu-button:hover .menu-icon {
+  opacity: 0.7;
+}
+
+.menu-icon-open {
+  opacity: 0.7;
+}
+
+.menu-list-container {
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  width: 15rem;
+  background-color: rgba(13, 13, 18, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-list-container.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu-list-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-list-container li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #e0e0e0;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  border: 1px transparent solid;
+  transition: background-color 0.2s ease;
+}
+
+.menu-list-container li a:hover {
+  background-color: rgba(255, 255, 255, 0.025);
+  border-color: var(--color-primary);
+}
