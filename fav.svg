@@ -8,21 +8,21 @@
   </defs>
   <g stroke-width="6" stroke-linecap="butt" fill="none" transform="translate(14, 8) scale(0.75)">
 
-    <g opacity="0.5" stroke-dasharray="2, 2">
-      <line y2="64" y1="0" x2="3" x1="3" stroke="#2861dbff" />
-      <line y2="3" x2="34" y1="3" x1="0" stroke="#2861dbff" />
-      <line y2="64" y1="0" x2="43" x1="43" stroke="#7628dbff" />
+
+    <g opacity="0.5" stroke-dasharray="2, 2" stroke="#9b0015ff">
+      <line y2="64" y1="0" x2="3" x1="3" />
+      <line y2="3" x2="34" y1="3" x1="0" />
+      <line y2="64" y1="0" x2="43" x1="43" />
     </g>
 
     <g mask="url(#m1)">
-      <line y2="0" y1="0" x2="0" x1="0" />
-      <line y2="3" x2="26" y1="3" x1="0"   stroke="#2861dbff" />
+      <line y2="3" x2="22" y1="3" x1="0"   stroke="#2861dbff" />
       <line y2="14" y1="14" x2="17" x1="0" stroke="#2861dbff" />
-      <line y2="36" y1="0" x2="3" x1="3"   stroke="#2861dbff" />
+      <line y2="35.5" y1="0" x2="3" x1="3"   stroke="#2861dbff" />
       <line y2="3" y1="3" x1="25" x2="46"  stroke="#7628dbff" />
     </g>
 
-    <line y2="62" y1="0" x1="47" x2="-0.5" stroke="#7628dbff" stroke-dasharray="16.5, 4" />
+    <line y2="60" y1="4" x1="43.5" x2="2.2" stroke="#7628dbff" stroke-dasharray="16.5, 4" />
     <line y2="61" y1="61" x2="46" x1="0"  stroke="#7628dbff" stroke-dasharray="21, 4" />
 
   </g>
