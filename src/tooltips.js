@@ -9,14 +9,14 @@ const dict = {
     "These Trusted Capable Models are 'trusted' in that they act as a neutral mediating party with agreed objective and only output a privacy-preserving report. They are limited by the capabilities and confidence of Trusted Capable Models.",
   model: "Refers to an AI model registered for training or inference in the system, subject to relevant safety standards.",
   phase: "Stage of AI model lifecycle: pre-training, post-training, or inference.",
-  eval: "An evaluation process to determine AI model safety. Standardized by Templates.",
-  bench: "Benchmarks used to assess AI model performance. Used to set red-lines. Standardized by Templates.",
   container: "Secure, encrypted encapsulation for executing closed-source AI models. Optionally non-encrypted for open-source (or open-weight) AI models.",
   workload: "Sequence of tasks for model training, governed by system safety standards. They are based on system templates. Not utilized when running certified inference model.",
   template: "Standardized framework protocols for model architectures, workloads, safeguards, and audits that enable collaborative safety research and development.",
   hardware: "Registered specialized on/off-chip devices verified for secure AI compute. Requires on-premise inspections.",
-  safeguard: "Pre-safety (before workload begins) for registered training models to check for violations in training data domains, model phase, model architecture, RSI, etc.",
-  audit: "Post-safety (after training workload completes) evaluations and benchmarks to ensure safety standards.",
+  guardrail: "Pre-safety (before workload begins) for registered training models to check for violations in training data domains, model phase, model architecture, RSI, etc.",
+  audit: "Post-safety (after training workload completes) checks to ensure safety standards.",
+  guard: "Automated privacy-preserving model architecture and training data assessments to ensure safety and compliance that make up a guardrail. They are created by the global safety research community and build off system templates. They are voted into safety standards.",
+  check: "Automated safety detectors, evaluations, benchmarks that make up an audit. They are created by the global safety research community and build off system templates. They are voted into safety standards.",
   personnel: "Registered, vetted tiered experts in policy, safety, software, or hardware.",
   budget: "Allocated compute resources (compute, memory, bandwidth, energy) for models and hardware, determined via voting.",
   otk: "One-Time Key: Cryptographic key for secure, compute budgeted workload execution or inference model use.",
@@ -37,9 +37,11 @@ const dict = {
   ccbrn: "Cyber, Chemical, Biological, Radiological, Nuclear: Restricted data domains for safety.",
   token: "The system uses tokens for metering blockchain system operations (refer to as 'gas'), not tradable externally. " +
     "Tokens are purchased by the model authors, safety module developers and nations that maintain a token pool for system upkeep.",
-  devicemating: "Device mating: Specialized hardware that locks a specific AI model to a particular device, particularity relevant for autonomous weapons. " +
+  devicemating: "Model-Device Mating: Specialized hardware that locks a specific AI model to a particular device, particularity relevant for autonomous weapons. " +
     "The device cannot run a different model and the model cannot be copied and run on other hardware. " +
-    "This ensures that the model and hardware are used only as intended and prevents unauthorized reuse or repurposing."
+    "This ensures that the model and hardware are used only as intended and prevents unauthorized reuse or repurposing.",
+  continuallearning: "Continual learning models include all paradigms of online/streaming continual/lifelong‑learning systems " +
+    "(e.g. real‑time/frequent reinforcement‑learning) or with any form of meta-learning (short of RSI).",
 }
 
 let c = ""
