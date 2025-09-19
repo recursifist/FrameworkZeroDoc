@@ -15,8 +15,10 @@ const dict = {
   hardware: "Registered specialized on/off-chip devices verified for secure AI compute. Requires on-premise inspections.",
   guardrail: "Pre-safety (before workload begins) for registered training models to check for violations in training data domains, model phase, model architecture, RSI, etc.",
   audit: "Post-safety (after training workload completes) checks to ensure safety standards.",
-  guard: "Automated privacy-preserving model architecture and training data assessments to ensure safety and compliance that make up a guardrail. They are created by the global safety research community and build off system templates. They are voted into safety standards.",
-  check: "Automated safety detectors, evaluations, benchmarks that make up an audit. They are created by the global safety research community and build off system templates. They are voted into safety standards.",
+  guard: "Automated privacy-preserving model architecture and training data assessments to ensure safety and compliance that make up a guardrail. " +
+    "They are created by the global safety research community and build off system templates utilizing TEEs, TCMES, and other community created components. " +
+    "They are voted into safety standards.",
+  check: "Automated safety detectors, evaluations, benchmarks, and other community created components (e.g. GSAI) that make up an audit. They are created by the global safety research community and build off system templates. They are voted into safety standards.",
   personnel: "Registered, vetted tiered experts in policy, safety, software, or hardware.",
   budget: "Allocated compute resources (compute, memory, bandwidth, energy) for models and hardware, determined via voting.",
   otk: "One-Time Key: Cryptographic key for secure, compute budgeted workload execution or inference model use.",
@@ -42,6 +44,7 @@ const dict = {
     "This ensures that the model and hardware are used only as intended and prevents unauthorized reuse or repurposing.",
   continuallearning: "Continual learning models include all paradigms of online/streaming continual/lifelong‑learning systems " +
     "(e.g. real‑time/frequent reinforcement‑learning) or with any form of meta-learning (short of RSI).",
+  gsai: "Guaranteed Safe AI (GSAI): A framework that provides quantifiable guarantees of AI safety, encapsulated as audit checks.",
 }
 
 let c = ""
