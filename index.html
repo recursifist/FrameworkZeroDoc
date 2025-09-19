@@ -45,8 +45,8 @@
         </svg>
       </div>
       <div class="menu-list-container" id="menu-list">
-        <!-- Doc Version -->
-        <div class="mt-1 ml-4 select-none text-gray-400">Version 1.03</div>
+        <!-- Doc Version (menu) -->
+        <div class="mt-1 ml-4 select-none text-red-400">Version <span class="version-number"></span></div>
         <!-- Menu items will be dynamically populated -->
         <ul></ul>
       </div>
@@ -60,6 +60,8 @@
         <div class="pr-6 pt-0 m-0 ml-2 text-logo bright leading-tight self-center">
           <div class="text-xl -mt-1">FRAMEWORK</div>
           <div class="-mt-2 text-3xl">ZERO</div>
+          <!-- Doc Version (logo) -->
+          <div class="-mt-1 pl-1 text-sm text-red-500">v<span class="version-number"></span></div>
         </div>
       </div>
 
@@ -216,7 +218,8 @@
             <p><strong class="accent bright">Foundational Outer Alignment:</strong> Ensures AI aligns with
               bedrock polices set by international consensus.</p>
             <p><strong class="accent bright">Standardized Modular Safety:</strong>
-              Embodies safety specs, policies, testing & capability red-lines which is applied based on a model's architecture, 
+              Embodies safety specs, policies, testing & capability red-lines which is applied based on a model's
+              architecture,
               risk tier, declared intent, purpose and scope (narrow or general).
               <br><br>
               It is comprised of verifiable <span class="tp" data-tp="guardrail">guardrails</span> and <span class="tp"
@@ -389,30 +392,30 @@
               <li><strong class="text-lg accent bright">OTK Issuer:</strong><br> Uses near real-time hardware and model
                 budgets for compute governance.
                 OTKs are cryptographically generated on-chain, tied to a specific run, workload, model, and specific
-                registered hardware, with expiry.
+                registered hardware, with expiry.<br>
                 Semi-random OTK "drip" issues keys incrementally during the run, mitigating theft, reuse or
                 decentralized compute gaming.
                 <br><br>
                 The <span class="tp" data-tp="otk">OTK</span> "drip" overcomes blockchain latency issues by issuing
                 budget
                 rations, potentially queuing an
-                addition OTK to prevent interruption, never surpassing a run's (or hardware's) allotted budget. <span
-                  class="tp" data-tp="budget">Budgets</span>
+                addition OTK to prevent interruption, never surpassing a run's (or hardware's) allotted budget.<br>
+                <span class="tp" data-tp="budget">Budgets</span>
                 are managed
-                on-chain, updated throughout a run. The OTK Issuer halts the OTK "drip" on failed hardware integrity
-                attestations.
+                on-chain, updated throughout a run.
+                The OTK Issuer halts the OTK "drip" on failed hardware integrity attestations.
                 <br><br>
                 Inference models are issued OTKs at less frequent increments with higher budget rations, tied to the
                 underlying hardware.
               </li>
               <li><strong class="text-lg accent bright">Phase Detection:</strong><br>
-                Hardware enforces a model (or run stage) <span class="tp" data-tp="phase">phase</span> to prevent phase
+                Hardware enforces a model (or workload runs or run stages) <span class="tp" data-tp="phase">phase</span> to prevent phase
                 gaming (e.g.
                 Inference used for unapproved training).
                 This is mitigated via model and workload <span class="tp" data-tp="template">templates</span>, in
                 addition to <span class="tp" data-tp="guardrails">guardrails</span>.
                 <br>
-                <a class="text-base underline" href="#apdx-phase">See appendix for phase detection specifics.</a>
+                <a class="underline" href="#apdx-phase">See appendix for phase detection specifics.</a>
               </li>
               <li>
                 <strong class="text-lg accent bright">Hardware Verification:</strong><br> Registered on/off-chip
@@ -446,12 +449,13 @@
                 <span class="tp" data-tp="rsi">RSI</span> detection. Depending on the severity level
                 of a failed guardrail, a workload may be cancelled.
                 Audits verify safety via community research <span class="tp" data-tp="check">checks</span>.
-                Both are run inside privacy-preserving <span class="tp" data-tp="tee">TEEs</span> or <span class="tp"
-                  data-tp="tcme">TCMEs</span>
+                Both are run inside privacy-preserving <span class="tp" data-tp="tee">TEEs</span> 
+                or <span class="tp" data-tp="tcme">TCMEs</span>
                 and produce reports without disclosing intellectual property details.
                 <br><br>
                 Audits measure capability levels and are used to enforce universal, as well as model-based, red-lines,
                 serving to limit general-purpose models or restrict narrow AI models to their domain.
+                They encapsulate community created concepts (e.g. evaluations, benchmarks, and Guaranteed Safe AI (<span class="tp" data-tp="gsai">GSAI))</span>.
               </li>
               <li><strong class="text-lg accent bright">Post-Workload:</strong><br>
                 When a workload completes, a new 'Pending' Inference model is created then subsequently run through
@@ -472,7 +476,8 @@
                 model authors.
               </li>
               <li><strong class="text-lg accent bright">Continual Learning Models:</strong><br>
-                Models that <span class="tp" data-tp="continuallearning">continuously learn</span> outside of explicit training phases are handled via model expiry.
+                Models that <span class="tp" data-tp="continuallearning">continuously learn</span> outside of explicit
+                training phases are handled via model expiry.
                 At each expiry, a checkpoint model is registered as new inference model with a new expiry.
               </li>
               <li><strong class="text-lg accent bright">Inference at AI-compute datacenters:</strong><br>
@@ -681,7 +686,9 @@
           <a class="exlink" href="https://arxiv.org/pdf/2501.08970" target="_blank">Shumailov, 2025</a>,
           <a class="exlink"
             href="https://intelligence.org/wp-content/uploads/2024/11/Mechanisms-to-Verify-International-Agreements-About-AI-Development-27-Nov-24.pdf"
-            target="_blank">Scher, 2024</a> and the work of many others.
+            target="_blank">Scher, 2024</a>,
+          <a class="exlink" href="https://arxiv.org/html/2405.06624v3" target="_blank">Dalrymple, 2024</a>,
+          and the work of many others.
           <br>
           The DAO framework was inspired by <a class="exlink"
             href="https://www.figma.com/board/spae5pctjAE6eSfhQ1ngRt/SciThereum" target="_blank">The SciThereum
@@ -730,10 +737,10 @@
             </li>
             <li><strong>Model lifecycle monitoring</strong> covers a model's phases and continual learning checkpoints.
               <br>
-              Continual learning models include all paradigms of online/streaming continual/lifelong‑learning systems  
+              Continual learning models include all paradigms of online/streaming continual/lifelong‑learning systems
               (e.g. real‑time/frequent reinforcement‑learning) or with any form of meta-learning (short of RSI).
-              For such models, this framework has limited control, and 
-              likely inadequate for more advanced models of this category. Preventative measures and mitigation 
+              For such models, this framework has limited control, and
+              likely inadequate for more advanced models of this category. Preventative measures and mitigation
               are achieved by model architecture templating, guardrails, audits, and voting revision calls.
             </li>
             <li><strong>Off-system training remains possible,</strong> though heavily hindered by global mandates on
@@ -742,7 +749,7 @@
             <li><strong>Does not fully govern model inference.</strong><br>
               While inference at participating AI-compute datacenters can only happen with approved, certified models,
               governance of inference input/output is beyond the scope of the system.
-              On-chain system safeguards for inference input/output could be added to this framework, 
+              On-chain system safeguards for inference input/output could be added to this framework,
               though the framework itself lacks ability to enforce it.
               <br><br>
               Inference requires fast and low-latency processing at scale, which conflicts with the slower and
@@ -763,6 +770,7 @@
             Appendix
           </h2>
           <ul class="list-inside space-y-12 text-gray-300">
+
             <li id="apdx-tee"><strong class="text-xl accent bright">Trusted Execution Environments (TEEs):</strong><br>
               TEEs provide secure and privacy-preserving code execution in a sealed virtual environment.
               They allow the system to securely deploy model containers and run workloads. They produce reports without
@@ -772,6 +780,7 @@
               <br>
               <a class="exlink" href="https://arxiv.org/pdf/2506.23706" target="_blank">Schnabl, 2025</a>
             </li>
+
             <li id="apdx-tcme"><strong class="text-xl accent bright">Trusted Capable Model Environments
                 (TCMEs):</strong><br>
               TCMEs allow a stateless AI model to be instructed to privately verify model container and workload code to
@@ -791,8 +800,18 @@
               private post-Workload output.
               <br>
               <a class="exlink" href="https://arxiv.org/pdf/2501.08970" target="_blank">Shumailov, 2025</a>
-
             </li>
+
+            <li id="apdx-gsai"><strong class="text-xl accent bright">Guaranteed Safe AI (GSAI):</strong><br>
+              A framework that provides quantifiable guarantees of AI safety, encapsulated as guardrail checks.
+              <br><br>
+              "Approaches that follow the GSAI framework aim to provide the level of quantitative safety guarantees we've
+              come to expect from other engineered systems. This is achieved with three core components: an auditable,
+              separable world model, a way to describe what portions of the state space are 'safe' and 'unsafe', and a
+              verifier (which provides an auditable proof certificate that the output satisfy the safety specification
+              in the world model)." - <a class="exlink" href="https://www.gsais.org/#gsai" target="_blank">from GSAIS.org</a>
+            </li>
+
             <li id="apdx-rsi"><strong class="text-xl accent bright">Recursive Self-Improvement (RSI)
                 Mitigation</strong><br>
               RSI is mitigated through (A) model registration
@@ -801,6 +820,7 @@
               It is important to note that total elimination of these concerns is not feasible given the development of
               novel architectures and algorithmic improvements.
             </li>
+
             <li id="apdx-phase"><strong class="text-xl accent bright">Phase Detection:</strong><br>
               Reliably detecting a model's Phase requires adjustments, and may even become infeasible as architectures
               and hardware advance.
@@ -895,6 +915,15 @@
     </div>
 
   </div>
+
+  <script>
+    // Versioning
+    const versionNumber = "1.04"
+    window.addEventListener('load', () => {
+      const versionElements = document.getElementsByClassName('version-number')
+      Array.from(versionElements).forEach(e => e.textContent = versionNumber)
+    })
+  </script>
 
 </body>
 
