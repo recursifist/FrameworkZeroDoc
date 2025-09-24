@@ -1,7 +1,7 @@
 // Tooltips <span class="tp" data-tp="keyword">
 const dict = {
-  agi: "AGI: AI with powerful capabilities across all domains, matching the level of the most-capable human of each domain. It is not an artificial 'team of experts' rather " +
-    "an absolute polymath not limited to human brain speeds, memory or performance. It is therefore smarter-than-human making it extremely difficult to control, or verify safety. Using this definition, " +
+  agi: "AGI: AI with powerful capabilities across broad domains, matching the level of the most-capable human of each domain. It is not an artificial 'team of experts' rather " +
+    "an extensive polymath not limited to human brain speeds, memory or performance. It is therefore smarter-than-human making it extremely difficult to control, or verify safety. Using this definition, " +
     "AGI will speed up progress to Superintelligence, either via autonomous self-improvement or AI-assisted research. " +
     "What separates AGI from Superintelligence is the factor of smarter-than-human gap.",
   tee: "Trusted Execution Environment: Secure, privacy-preserving execution for model containers and workloads.",

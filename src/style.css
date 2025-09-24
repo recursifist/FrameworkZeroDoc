@@ -57,6 +57,7 @@
 .exlink {
   text-decoration: underline 1px var(--color-accent);
   padding-right: 16px;
+  @apply text-nowrap;
 }
 
 .exlink::after {
@@ -94,7 +95,7 @@ body {
 }
 
 canvas {
-  opacity: 0.7;
+  opacity: 0.4;
 }
 
 #main {
