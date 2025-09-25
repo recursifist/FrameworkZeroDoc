@@ -4,4 +4,5 @@
 
 [www.FrameworkZero.org](https://www.FrameworkZero.org)
 
-![International Hybrid-Technical AI Governance DAO](https://github.com/recursifist/IHTAIGD/blob/07d2854246a2ed756d1b87f80204dc2483c5613d/flow.png)
+![International Hybrid-Technical AI Governance DAO](https://github.com/recursifist/FrameworkZeroDoc/blob/7f84c578fcae7926d1a86915d6ede27c1fbae856/flow.png)
+
