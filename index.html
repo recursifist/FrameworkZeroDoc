@@ -81,14 +81,17 @@
 
       <!-- Intro Section -->
       <section id="intro" class="mb-16 section-hidden">
-        <div class="content-card intro-card pt-0 p-6 md:p-10 md:pt-0 rounded-md text-lg md:text-xl">
-          <div class="video-wrapper flex w-fit place-content-center -mx-10 py-0">
-            <video id="intro-video" width="auto" height="auto" autoplay preload="metadata" muted playsinline>
-              <source src="flow.mp4" type="video/mp4">
+        <div class="content-card pt-0 p-6 md:p-10 md:pt-0 rounded-md text-lg md:text-xl">
+          <div class="video-wrapper cursor-pointer relative flex justify-center items-center w-fit mx-auto -mx-10 py-0">
+            <video id="intro-video" autoplay muted playsinline preload="metadata" class="block opacity-50">
+              <source src="flow.mp4" type="video/mp4" />
             </video>
+            <img id="play-icon" src="playicon.svg" class="scale2x cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+            <h3 id="play-text" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -ml-12 mt-2 text-4xl font-bold text-shadow-2xl">Intro</h3>
             <img src="landing.jpg" alt="FrameworkZero - International Hybrid-Technical AI Governance DAO"
               class="hidden mix-blend-screen" />
           </div>
+
           <div class="text-center">
             <div class="text-3xl font-bold">To provide the tools <span class="text-nowrap">and infrastructure</span>
             </div>
