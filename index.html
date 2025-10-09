@@ -18,10 +18,8 @@
   <script src="scripts.js" defer async></script>
 </head>
 
-<body class="bg-gray-950 text-gray-200 subpixel-antialiased">
-
-  <!-- Canvas for the background animation -->
-  <canvas id="header-canvas" class="fixed left-0 w-full h-75 z-0"></canvas>
+<body class="text-gray-200 subpixel-antialiased">
+  <div class="background-grad fixed top-0 bottom-0 right-0 left-0"></div>
 
   <div id="tp-container" class="invisible fixed bottom-0 left-0 right-0 py-6 px-6 md:px-24 z-50
       text-base text-center text-white border-t-2 secondary-b
@@ -62,68 +60,89 @@
         </div>
       </div>
 
-      <header class="text-center relative h-auto flex items-center justify-center py-9 mt-6 mb-4">
+      <header class="text-center relative h-auto flex items-center justify-center py-9 mt-6 -mb-2">
         <section id="intro">
-
           <span class="menu-nav-target-title hidden">Introduction</span>
+
           <div class="relative z-10">
             <h1 class="text-logo font-extrabold uppercase leading-tight mb-2 text-white">
-              <span class="block text-xl md:text-3xl text-gray-300">International <span
+              <img src="logo.svg" alt="FrameworkZero logo" class="h-24 mx-auto mx-auto mb-3" />
+              <span class="block text-xl md:text-2xl text-gray-300">International <span
                   class="text-nowrap">Hybrid-Technical</span></span>
-              <span class="block text-4xl md:text-6xl">
+              <span class="block text-3xl md:text-5xl">
                 <span class="secondary">AI Governance </span>
                 <span class="primary">DAO</span></span>
             </h1>
             <p class="text-xl md:text-2xl text-gray-400">A foundational framework for responsible AI development</p>
           </div>
+
+          <div class="absolute z-5 -translate-y-full scale-x-150 blur-xl opacity-50 hue-rotate-30 mt-2">
+            <h1 class="text-logo font-extrabold uppercase leading-tight mb-2 text-white">
+              <img src="logo.svg" alt="FrameworkZero logo" class="h-24 mx-auto mx-auto mb-3" />
+              <span class="block text-xl md:text-2xl text-gray-300">International <span
+                  class="text-nowrap">Hybrid-Technical</span></span>
+              <span class="block text-4xl md:text-5xl">
+                <span class="secondary">AI Governance </span>
+                <span class="primary">DAO</span></span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400">A foundational framework for responsible AI development</p>
+          </div>
+          
         </section>
       </header>
 
       <!-- Intro Section -->
       <section id="intro" class="mb-16 section-hidden">
-        <div class="content-card pt-0 p-6 md:p-10 md:pt-0 rounded-md text-lg md:text-xl">
-          <div class="video-wrapper cursor-pointer relative flex justify-center items-center w-fit mx-auto -mx-10 py-0">
+        <div class="content-card no-grad pt-0 p-6 md:p-10 md:pt-0 rounded-md text-lg md:text-xl">
+          <div class="video-wrapper cursor-pointer relative flex justify-center items-center w-fit mx-auto -mx-10 pb-1">
             <video id="intro-video" autoplay muted playsinline preload="metadata" class="block opacity-50">
               <source src="flow.mp4" type="video/mp4" />
+              <source src="flow.webp" type="video/webp" />
             </video>
-            <img id="play-icon" src="playicon.svg" class="scale2x cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-            <h3 id="play-text" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -ml-12 mt-2 text-4xl font-bold text-shadow-2xl">Intro</h3>
+            <img id="play-icon" src="playicon.svg"
+              class="scale2x cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+            <h3 id="play-text"
+              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -mt-9 ml-1 text-2xl font-bold text-shadow-2xl">
+            </h3>
             <img src="landing.jpg" alt="FrameworkZero - International Hybrid-Technical AI Governance DAO"
               class="hidden mix-blend-screen" />
           </div>
-
-          <div class="text-center">
-            <div class="text-3xl font-bold">To provide the tools <span class="text-nowrap">and infrastructure</span>
-            </div>
-            <div class="text-2xl font-bold">to <i>actualize</i> a global AI safety standard</div>
-          </div>
-          <br>
           <p class="text-gray-300">
             <span class="text-2xl">
               An actionable international AI governance solution utilizing blockchain, collaborative
               verifiable safety, and automated technical enforcement with human-in-the-loop orchestration.
             </span>
             <br><br>
-            An open-source blockchain-based Decentralized Autonomous Organization (<span class="tp"
-              data-tp="dao">DAO</span>) multilaterally developed
-            and operated - enforced by nation states, adopted by the AI industry and integrated
-            into AI-compute datacenters.
-            <br><br>
-            Enabling global coordination between policy makers, safety experts and industry with tiered strong consensus voting,
-            enabling dynamic adaptability and control in an evolving technical landscape.
-            Setting red-lines to the race towards Artificial General Intelligence (<span class="tp"
-              data-tp="agi">AGI</span>) while preventing
-            critical AI risk.
-            <br><br>
-            Building on existing research in AI governance, technical governance, compute governance, verifiable
-            safety, specialized compute hardware (on/off chip), Trusted
-            Execution Environments (<span class="tp" data-tp="tee">TEEs</span>) & Trusted
-            Capable Model Environments (<span class="tp" data-tp="tcme">TCMEs</span>).
+
+          <p class="text-center text-3xl font-bold accent bright">
+            To provide the tools <span class="text-nowrap">and infrastructure</span><br>
+            <span class="text-2xl">
+              <span class="text-nowrap">to <i>actualize</i></span> <span class="text-nowrap">a global AI safety
+              standard</span>
+            </span>
+          </p>
+          <br>
+          An open-source blockchain-based Decentralized Autonomous Organization (<span class="tp"
+            data-tp="dao">DAO</span>) multilaterally developed
+          and operated - enforced by nation states, adopted by the AI industry and integrated
+          into AI-compute datacenters.
+          <br><br>
+          Enabling global coordination between policy makers, safety experts and industry with tiered strong consensus
+          voting,
+          enabling dynamic adaptability and control in an evolving technical landscape.
+          Setting red-lines to the race towards Artificial General Intelligence (<span class="tp"
+            data-tp="agi">AGI</span>) while preventing
+          critical AI risk.
+          <br><br>
+          Building on existing research in AI governance, technical governance, compute governance, verifiable
+          safety, specialized compute hardware (on/off chip), Trusted
+          Execution Environments (<span class="tp" data-tp="tee">TEEs</span>) & Trusted
+          Capable Model Environments (<span class="tp" data-tp="tcme">TCMEs</span>).
           </p>
         </div>
       </section>
 
-      <hr class="hr-gradient my-16">
+      <hr class="hr-gradient bg-white my-16">
 
       <!-- Mission & Features Section -->
       <section id="mission" class="mb-16 section-hidden">
@@ -135,7 +154,7 @@
           <br>
           <div class="grid grid-cols-2 grid-rows-2 content-between place-items-center items-stretch gap-4 text-lg">
             <div class="text-xl font-bold col-span-2">To bring into being standardized
-              safety-first global AI development that is mutually advantageous.</div>
+              safety-first global AI development.</div>
             <div class="accent-b border py-4 px-4 w-full rounded col-span-2 md:col-span-1">Tone down dangerous national
               & market AI race dynamics.</div>
             <div class="accent-b border py-4 px-4 w-full rounded col-span-2 md:col-span-1">Empower collaborative AI
@@ -152,8 +171,8 @@
 
         <!-- Problems & Solutions Card -->
         <div class="content-card p-6 md:p-10 rounded-md">
-          <h2 class="text-3xl font-bold mb-4 text-gradient bright menu-nav-target-title">Problems &
-            Solutions</h2>
+          <h2 class="text-3xl font-bold mb-4 text-gradient bright menu-nav-target-title">
+            Problems & Solutions</h2>
           <div class="gap-8 text-gray-300 text-lg">
             <div>
               <h3 class="text-2xl font-bold accent bright">Problems</h3>
@@ -275,11 +294,6 @@
 
       <hr class="hr-gradient my-16">
 
-      <div class="text-center">
-        <h2 class="text-5xl font-bold">Technical Details</h2>
-      </div>
-      <hr class="hr-gradient my-16">
-
       <!-- System Architecture Section -->
       <section id="architecture" class="mb-16 section-hidden">
         <div class="content-card p-6 md:p-10 rounded-md text-lg">
@@ -294,7 +308,8 @@
             mainnet load.<br>
             <span class="accent bright"><span class="tp" data-tp="layer3">Layer-3</span></span> dApps provide user
             interfaces.
-            <a href="architecture.png" target="_blank"><img src="architecture.png" class="py-6" /></a>
+            <a href="architecture.png" target="_blank"><img src="architecture.png"
+                class="py-6 contrast-125 mix-blend-lighten" /></a>
           </p>
 
           <p><strong class="accent bright"><span class="tp" data-tp="template">Templates</span></strong> for AI model
@@ -330,7 +345,7 @@
                 standard</span>,</strong>
             which consists of voted-upon standardized safety modules developed by the global community.
             <a href="safetyprocess.png" target="_blank"><img src="safetyprocess.png" alt="Safety Process Diagram"
-                class="max-w-auto lg:max-w-4xl py-6" /></a>
+                class="max-w-auto lg:max-w-4xl py-6 contrast-125 mix-blend-lighten" /></a>
           </p>
           <p>
             An AI model
@@ -338,7 +353,7 @@
             Certified models must be renewed periodically, if it is requested via voting, and after any updates to the
             safety standard.
             <a href="safetyflow.png" target="_blank"><img src="safetyflow.png" alt="Basic Safety Flow Diagram"
-                class="pr-0 lg:pr-12 py-6" /></a>
+                class="pr-0 lg:pr-12 py-6 contrast-125 contrast-125 mix-blend-lighten" /></a>
           </p>
           <p class="text-lg text-gray-300">
             <strong>The system flow governs models with
@@ -348,7 +363,7 @@
             The system covers inference to a limited degree, essentially serving as model certification. This
             is due to inherent limitations in inference governance, as inference is less hardware restricted.
             <a href="flow.png" target="_blank"><img src="flow.png" alt="System Flow Diagram"
-                class="max-w-auto lg:max-w-4xl py-6" /></a>
+                class="max-w-auto lg:max-w-4xl py-6 contrast-125 mix-blend-lighten" /></a>
           </p>
 
           <div class="block md:flex px-6 gap-8">
@@ -411,7 +426,8 @@
                 underlying hardware.
               </li>
               <li><strong class="text-lg accent bright">Phase Detection:</strong><br>
-                Hardware enforces a model (or workload runs or run stages) <span class="tp" data-tp="phase">phase</span> to prevent phase
+                Hardware enforces a model (or workload runs or run stages) <span class="tp" data-tp="phase">phase</span>
+                to prevent phase
                 gaming (e.g.
                 Inference used for unapproved training).
                 This is mitigated via model and workload <span class="tp" data-tp="template">templates</span>, in
@@ -451,13 +467,14 @@
                 <span class="tp" data-tp="rsi">RSI</span> detection. Depending on the severity level
                 of a failed guardrail, a workload may be cancelled.
                 Audits verify safety via community research <span class="tp" data-tp="check">checks</span>.
-                Both are run inside privacy-preserving <span class="tp" data-tp="tee">TEEs</span> 
+                Both are run inside privacy-preserving <span class="tp" data-tp="tee">TEEs</span>
                 or <span class="tp" data-tp="tcme">TCMEs</span>
                 and produce reports without disclosing intellectual property details.
                 <br><br>
                 Audits measure capability levels and are used to enforce universal, as well as model-based, red-lines,
                 serving to limit general-purpose models or restrict narrow AI models to their domain.
-                They encapsulate community created concepts (e.g. evaluations, benchmarks, and Guaranteed Safe AI (<span class="tp" data-tp="gsai">GSAI))</span>.
+                They encapsulate community created concepts (e.g. evaluations, benchmarks, and Guaranteed Safe AI (<span
+                  class="tp" data-tp="gsai">GSAI))</span>.
               </li>
               <li><strong class="text-lg accent bright">Post-Workload:</strong><br>
                 When a workload completes, a new 'Pending' Inference model is created then subsequently run through
@@ -507,7 +524,8 @@
           Participation happens via a tiered structure and is restricted to registered, vetted Policy & Safety
           <span class="tp" data-tp="personnel">personnel</span>.
           <br>
-          <a href="safetyvoting.png" target="_blank"><img src="safetyvoting.png" class="max-w-auto lg:max-w-2xl" /></a>
+          <a href="safetyvoting.png" target="_blank"><img src="safetyvoting.png"
+              class="max-w-auto lg:max-w-2xl contrast-125 mix-blend-lighten" /></a>
           <p>
             Ensuring perpetual safety entails continual update cycles, as it does with most cybersecurity.
             However, the transparent nature of this framework demands increased update frequency due to AI situational
@@ -627,7 +645,8 @@
               are not
               covered by gas tokens.
               Those are settled externally between datacenters and model registrants. This separation avoids
-              over-delegating control to the framework, serving as an off-system security layer and preserving government regulation on datacenter customers.</p>
+              over-delegating control to the framework, serving as an off-system security layer and preserving
+              government regulation on datacenter customers.</p>
             <br>
 
             <p>
@@ -662,9 +681,9 @@
             About
           </h2>
           <p>
-            The <i>AI Safety FrameworkZero DAO</i> seeks only to accomplish it's mission: <br>
+            The <i>AI Safety FrameworkZero DAO</i> mission: <br>
             <strong>To bring into being standardized safety-first
-              global AI development that is mutually advantageous.</strong>
+              global AI development.</strong>
           </p>
           <br>
           <div class="block md:flex">
@@ -674,8 +693,10 @@
             </div>
             <div class="content-center basis-10/12 pl-0 md:pl-6 pr-24 pt-6 md:pt-0">
               It's ambition is to enact global coordination, inspire the international will and actualize an AI safety
-              standard to prevent catastrophic AI risk.<br>
-              It is not a for-profit project.
+              standard to prevent catastrophic AI risk.
+              It sets forth an actionable plan should the nations come to realize AI safety can only truly be achieve as
+              a global effort.<br>
+              It is an open not-for-profit project.
             </div>
           </div>
           <br>
@@ -696,6 +717,7 @@
             href="https://www.narrowpath.co/" target="_blank">Narrow Path</a> compatible.
           <br>
           <br>
+          <p>We are seeking collaborators. Feedback and criticisms are welcome.</p>
           <strong class="text-xl">Get in touch via the <a href="https://x.com/i/communities/1964271923119989164"
               target="_blank" class="exlink">𝕏 community</a></strong>
         </div>
@@ -806,11 +828,13 @@
             <li id="apdx-gsai"><strong class="text-xl accent bright">Guaranteed Safe AI (GSAI):</strong><br>
               A framework that provides quantifiable guarantees of AI safety, encapsulated as guardrail checks.
               <br><br>
-              "Approaches that follow the GSAI framework aim to provide the level of quantitative safety guarantees we've
+              "Approaches that follow the GSAI framework aim to provide the level of quantitative safety guarantees
+              we've
               come to expect from other engineered systems. This is achieved with three core components: an auditable,
               separable world model, a way to describe what portions of the state space are 'safe' and 'unsafe', and a
               verifier (which provides an auditable proof certificate that the output satisfy the safety specification
-              in the world model)." - <a class="exlink" href="https://www.gsais.org/#gsai" target="_blank">from GSAIS.org</a>
+              in the world model)." - <a class="exlink" href="https://www.gsais.org/#gsai" target="_blank">from
+                GSAIS.org</a>
             </li>
 
             <li id="apdx-rsi"><strong class="text-xl accent bright">Recursive Self-Improvement (RSI)
@@ -826,8 +850,9 @@
               Reliably detecting a model's Phase requires adjustments, and may even become infeasible as architectures
               and hardware advance.
               <div class="overflow-x-auto">
-                <table class="w-full text-left table-auto overflow-hidden rounded-md">
-                  <thead class="primary-bg primary-b">
+                <table
+                  class="w-full text-left table-auto overflow-hidden rounded-md border border-t-0 border-gray-900 text-base">
+                  <thead class="bg-gray-900 b-gray-800">
                     <tr>
                       <th class="p-2 md:p-4"></th>
                       <th class="p-2 md:p-4">Pre-train</th>
@@ -835,7 +860,7 @@
                       <th class="p-2 md:p-4">Inference</th>
                     </tr>
                   </thead>
-                  <tbody class="divide-y divide-gray-700 primary-b">
+                  <tbody class="divide-y divide-gray-800 primary-b">
                     <tr>
                       <td class="p-2 md:p-4">Data Used</td>
                       <td class="p-2 md:p-4">Massive, raw, unlabeled corpus (web, books, etc.)</td>
@@ -913,13 +938,24 @@
         </div>
       </section>
 
-    </div>
 
+    </div>
+      <!-- Footer -->
+      <section class="section-hidden relative bottom-0 left-0 right-0 z-10">
+        <hr class="hr-gradient">
+        <div class="p-4 bg-zinc-900 text-lg text-center tracking-wide">
+          AI Safety <span class="font-bold">FrameworkZero.org</span> Project
+          <span class="mx-2">|</span>
+          <span class="italic">Version <span class="version-number"></span></span>
+          <span class="mx-2">|</span>
+          2025
+        </div>
+      </section>
   </div>
 
   <script>
     // Versioning
-    const versionNumber = "1.05"
+    const versionNumber = "1.06"
     window.addEventListener('load', () => {
       const versionElements = document.getElementsByClassName('version-number')
       Array.from(versionElements).forEach(e => e.textContent = versionNumber)
