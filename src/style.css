@@ -88,14 +88,30 @@
 
 body {
   font-family: 'Roboto Flex', sans-serif;
-  color: #e0e0e0;
-  background-color: var(--background-color);
+  background: #090b0e;
   line-height: 1.75;
   overflow-x: hidden;
 }
 
-canvas {
+.background-grad {
+  background: linear-gradient(
+    to bottom,
+    #090b0e 70%,
+    #11161d 80%,
+    #161d26 90%
+  );
+  filter: blur(9px);
+}
+.background-grad::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100'%20height='100'%3E%3Cfilter%20id='noise'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='.73'%20numOctaves='9'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
   opacity: 0.4;
+  mix-blend-mode: overlay;
+  z-index: 1;
 }
 
 #main {
@@ -146,16 +162,34 @@ table {
 }
 
 .content-card {
-  background: #0e0e11;
-  border: 1px solid #2a2844cc;
+  background: linear-gradient(-20deg, #090b0e 60%, #121922) padding-box,
+              linear-gradient(#1a2330 45%, #212b3b) border-box;
+  border: 1px solid transparent;
   border-radius: 0.5rem;
   position: relative;
 }
+.content-card.no-grad {
+  background: linear-gradient(-10deg, #090b0e, #090b0e) padding-box,
+              linear-gradient(#1a2330 45%, #212b3b) border-box;
+}
+.content-card::before {
+  height: 100%;
+  width: 100%;
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='500'%20height='500'%3E%3Cfilter%20id='noise'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='.73'%20numOctaves='9'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  opacity: 0.075;
+  mix-blend-mode: luminosity;
+  filter: contrast(200%);
+  z-index: 5;
+}
 
-.intro-card {
-  background: #0e0e1144 !important;
+hr {
+  z-index: 5;
   position: relative;
-  overflow: hidden;
 }
 
 .hr-gradient {
@@ -258,4 +292,14 @@ table {
 .menu-list-container li a:hover {
   background-color: rgba(255, 255, 255, 0.025);
   border-color: var(--color-primary);
+}
+
+.scale2x {
+  transform: scale(3);
+}
+.scale2x:hover {
+  transform: scale(3.5);
+  transition: all;
+  transition-duration: 300;
+  transition-timing-function: ease-in-out;
 }
