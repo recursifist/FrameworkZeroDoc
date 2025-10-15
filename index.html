@@ -396,6 +396,11 @@
               post-safety (<span class="tp" data-tp="audit">audits</span>).</strong><br>
             The system covers inference to a limited degree, essentially serving as model certification. This
             is due to inherent limitations in inference governance, as inference is less hardware restricted.
+            <br>
+            <br>
+            To mitigate AI situational awareness, classified (off-chain developed, encrypted on-chain) guardrail and audit templates could be employed to effectively reduce AI situational
+            awareness. This introduces the potential for discriminant application, enabling biased or sabotaging false-positives and false-negatives, 
+            and would therefore entail adversarial development.
             <a href="flow.png" target="_blank"><img src="flow.png" alt="System Flow Diagram"
                 class="max-w-auto lg:max-w-4xl py-6 contrast-125 mix-blend-lighten" /></a>
           </p>
@@ -938,7 +943,7 @@
 
   <script>
     // Versioning
-    const versionNumber = "1.07"
+    const versionNumber = "1.08"
     window.addEventListener('load', () => {
       const versionElements = document.getElementsByClassName('version-number')
       Array.from(versionElements).forEach(e => e.textContent = versionNumber)
