@@ -42,7 +42,9 @@ document.addEventListener('click', (event) => {
     toggleMenu()
   }
 })
-const showMain = () => setTimeout(() => document.getElementById('main').classList.add('show'), 1 * 1000)
+
+const showSpeed = window.location.protocol !== "file:" ? 1000 : 0
+const showMain = () => setTimeout(() => document.getElementById('main').classList.add('show'), showSpeed)
 
 showMain()
 window.addEventListener('load', initMenu)
