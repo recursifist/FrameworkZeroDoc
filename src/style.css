@@ -54,6 +54,22 @@
   background-color: var(--color-secondary) !important;
 }
 
+a img {
+  @apply cursor-pointer select-none rounded hover:ring ring-gray-600/25 mix-blend-lighten;
+}
+
+#img-box {
+  background-color: #090b0e66;
+  @apply fixed flex inset-0 z-[99];
+}
+#img-box::before {
+  content: "close";
+  @apply absolute bottom-4 right-4 text-white text-lg cursor-pointer select-none;
+}
+#img-box img {
+  @apply w-screen h-screen object-contain rounded-lg shadow-lg;
+}
+
 .exlink {
   text-decoration: underline 1px var(--color-accent);
   padding-right: 16px;
@@ -73,13 +89,12 @@
 }
 
 .tp {
-  border-bottom: 2px var(--color-accent) dotted;
-  cursor: pointer;
+  @apply cursor-pointer underline underline-offset-4 decoration-dotted decoration-blue-700;
 }
 
 .tp:active,
 .tp:hover {
-  opacity: 0.75;
+  @apply decoration-blue-300;
 }
 
 #tp-container {

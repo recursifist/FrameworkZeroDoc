@@ -9,18 +9,20 @@ const dict = {
     "These Trusted Capable Models are 'trusted' in that they act as a neutral mediating party with agreed objective and only output a privacy-preserving report. They are limited by the capabilities and confidence of Trusted Capable Models.",
   assembly: "Refers to the complete AI system/model framework record registered for training or inference",
   phase: "Stage of AI lifecycle: pre-training, post-training, or inference.",
-  container: "Secure, encrypted encapsulation for running closed-source AI. Optionally non-encrypted for open-source/weight.",
+  container: "Securely-stored, encrypted encapsulation of an AI Assembly code base prior to training - or a trained, inference-ready AI. " +
+    "To preserve privacy, owning registrants must input the decryption keys whenever a container is deployed to a vault.",
   workload: "Orchestration of training compute tasks (runs) for training. They are based on framework templates. Not utilized for inference by this framework.",
-  template: "Standardized framework protocols for Architectures, Workloads, Probes, and Audits that enable collaborative safety research and development.",
+  template: "Standardized framework protocols for Architectures, Workloads & Safety Modules that enable collaborative safety research and development. " +
+    "They allow for standardize interaction between components and help enforce permitted architectures, workloads, paradigms and approaches.",
   hardware: "Registered specialized on/off-chip devices verified for secure AI compute. Requires on-premise inspections.",
   precompute: "Pre-Compute Safety (before training begins) to verify compliance with the Safety Standards.",
   postcompute: "Pre-Compute Safety (after training completes) to verify compliance with the Safety Standards.",
-  probe: "Automated privacy-preserving assessment of training data domains, architecture, phase adherence, restricted algoriths, or code patterns to ensure Pre-Compute safety and compliance. " +
-    "They are created by the global safety research community and build off framework templates utilizing TEEs, TCMES, and other community created components. " +
-    "They are voted into The Safety Standards.",
-  audit: "Automated assessments of red lines in capability and risk to ensure Post-Compute safety and compliance. " +
-    "They are created by the global safety research community and build off framework templates utilizing evaluations, benchmarks, automated red-teaming, and other community created components (e.g. GSAI)." + 
-    "They are voted into safety standards.",
+  vault: "Vaults are framework-provisioned Trusted Execution Environments with low-surface, hardened runtimes. There are three types (Training, Assembly, & Safety) " +
+  "which provide security, private & attestable hardware isolation for training, assembly interaction and the running of Safety Modules.",
+  modules: "Implementations of the Safety Template that contain specific AI safety complilations. " +
+    "There are three categories: Post-Compute, Pre-Compute, and Live Pre-Compute (full scaffolding, tooling & internet access)." +
+    "Collectively they allow secure, private assessment of AI Assemblies, such as training data domains, architecture, phase adherence, restricted algoriths, evaluations, benchmarks, and automated red-teaming. " +
+    "They are created by the global safety research community, built off Safety Templates, voted into The Safety Standards and run inside Safety Vaults. ",
   personnel: "Registered, vetted tiered experts in policy, safety, software, or hardware.",
   budget: "Allocated compute resources (compute, memory, bandwidth, energy) for registered AIs and hardware.",
   otk: "One-Time Key: Cryptographic key for secure compute budgeted workload execution or inference use. Issued for compute harware usage.",
@@ -34,7 +36,7 @@ const dict = {
   layer1: "Blockchain Mainnet: Main blockchain layer handling core governance and operations.",
   layer2: "Secondary blockchain layer for less dynamic tasks using ZK-Rollups (Zero-Knowledge proofs that allow trusted  blockchain computation to happen on a separate layer to reduce load and increase performance, before being added to the main layer.",
   layer3: "Decentralized apps providing user interfaces for blockchain platform interaction.",
-  thestandard: "The Safety Standards: Voted-upon safety modules (Probes & Audits) which embody the safety specs, red-lining and policies which apply to a registered AI. Multiple safety standards are defined coresponding to different AI Assemblies and apply systematically (removing the possibility of any double standards). " +
+  thestandard: "The Safety Standards: Voted-upon Safety Modules (Pre & Post-Compute) which embody the safety specs, red-lining and policies which apply to a registered AI. Multiple safety standards are defined coresponding to different AI Assemblies and apply systematically (removing the possibility of any double standards). " +
     "This flow allows constraint of an AI's capabilities, differentiating on general and narrow AI. e.g. Restricting a general-purpose AI, or confining a narrow AI to a domain.",
   hwattestations: "Cryptographic zero-knowledge proofs verifying hardware integrity during execution. It's purpose is to detect BIOS modifications, physical seal breach, relocation, anomalies, etc.",
   rsp: "Responsible Safe Scaling Policies: Guidelines for safe AI development.",
@@ -46,7 +48,7 @@ const dict = {
     "This ensures that the AI and hardware are used only as intended and prevents unauthorized reuse or repurposing.",
   continuallearning: "Continual learning AI includes all paradigms of online/streaming continual/lifelong‑learning systems " +
     "(e.g. real‑time/frequent reinforcement‑learning) or with any form of meta-learning (short of RSI).",
-  gsai: "Guaranteed Safe AI (GSAI): A framework that provides quantifiable guarantees of AI safety, encapsulated as an Audit.",
+  gsai: "Guaranteed Safe AI (GSAI): A framework that provides quantifiable guarantees of AI safety, encapsulated in Safety Modules.",
 }
 
 let c = ""
