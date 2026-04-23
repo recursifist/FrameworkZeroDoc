@@ -19,3 +19,5 @@ Repo for the public website.
 ### Safety Template Overview
 ![Safety Template Overview](https://github.com/recursifist/FrameworkZeroDoc/blob/ed0d7bf3f0ef17128a29416a628a2155caa73161/template.png)
 
+
+_Less deps = less surface_
